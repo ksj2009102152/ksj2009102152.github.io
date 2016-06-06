@@ -1,0 +1,148 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>PieChartIDf803a1e657f</title>
+<meta http-equiv="content-type" content="text/html;charset=euc-kr" />
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 75%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+ <!-- PieChart generated in R 3.3.0 by googleVis 0.5.10 package -->
+<!-- Mon Jun 06 15:17:39 2016 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataPieChartIDf803a1e657f () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Afghanistan",
+60.02826829 
+],
+[
+ "Angola",
+51.86617073 
+],
+[
+ "Albania",
+77.64046341 
+],
+[
+ "United Arab Emirates",
+77.19563415 
+],
+[
+ "Argentina",
+75.98609756 
+],
+[
+ "Armenia",
+74.56136585 
+],
+[
+ "Australia",
+82.14878049 
+] 
+];
+data.addColumn('string','Country.Name');
+data.addColumn('number','lifeExp');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartPieChartIDf803a1e657f() {
+var data = gvisDataPieChartIDf803a1e657f();
+var options = {};
+options["allowHtml"] = true;
+options["title"] = "7개 지역 국가의 기대수명 수치";
+
+
+    var chart = new google.visualization.PieChart(
+    document.getElementById('PieChartIDf803a1e657f')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartPieChartIDf803a1e657f);
+})();
+function displayChartPieChartIDf803a1e657f() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartIDf803a1e657f"></script>
+ 
+<!-- divChart -->
+  
+<div id="PieChartIDf803a1e657f" 
+  style="width: 500; height: automatic;">
+</div>
+ <div><span>Data: a7 &#8226; Chart ID: <a href="Chart_PieChartIDf803a1e657f.html">PieChartIDf803a1e657f</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.5.10</a></span><br /> 
+<!-- htmlFooter -->
+<span> 
+  R version 3.3.0 (2016-05-03) 
+  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/piechart">Documentation and Data Policy</a>
+</span></div>
+<p></p>
+<div>  
+<p> 각 지역 7개 국가의 기대수명 수치를 보여주는 pie 차트다.</p>
+<p> 아프가니스탄(중앙 아시아), 앙골라(아프리카), 알마니아(유럽), 아랍에미레이트(중앙아시아), 아르헨티나(남아메리카), 아르메니아(중앙아시아), 오스트레일리아(오세아니아)</p>
+<p> 위의 각 지역 7개 국가의 기대수명을 퍼센트로 확인 한 결과 앙골라와 같은 아프리카는 기대수명이 다소 낮음을 추론할 수 있다.</p>
+</div>
+
+</body>
+</html>
